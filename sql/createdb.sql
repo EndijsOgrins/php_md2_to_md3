@@ -1,6 +1,6 @@
 -- Create database
-CREATE DATABASE IF NOT EXISTS rally 
-    CHARACTER SET utf8mb4 
+CREATE DATABASE IF NOT EXISTS rally
+    CHARACTER SET utf8mb4
     COLLATE utf8mb4_latvian_ci;
 
 USE rally;
