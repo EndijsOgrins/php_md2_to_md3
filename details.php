@@ -31,7 +31,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 $sponsori = $result->fetch_all(MYSQLI_ASSOC);
 
-//print_r($sponsori);
+//print_r($sponsori); echo "<br>";
 //var_dump($sponsori);
 
 $stmt->close();

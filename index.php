@@ -4,11 +4,11 @@ ini_set('display_errors', 1);
 date_default_timezone_set('Europe/Riga');
 require_once 'classes/config.php';
 
-// Iegūstam sacensības grupētas pa gadiem
+// Sacensības unikālas, grupētas pa gadiem un kārtoju jau vaicājumā secību priekš attēlošanas. Datums no - 2024. gadā sākums un beigas 2025. būs kā 2024. gada posms.
 $vaicajums = "SELECT DISTINCT
             YEAR(datums_no) AS gads
           FROM sacensibas
-          ORDER BY gads DESC";
+          ORDER BY YEAR(datums_no) DESC";
 
 $gadi = [];
 $result = $mysqli->query($vaicajums);
@@ -40,6 +40,7 @@ if ($result) {
     <?php foreach ($gadi as $gads):
         $year = $gads['gads']; // [gads] => 2025
         $sacensibas = [];
+        // Atlasu katra $gadi objecta sacensības un sakārtoju dilstošā secībā.
         $result = $mysqli->query("SELECT * FROM sacensibas 
                                  WHERE YEAR(datums_no) = $year
                                  ORDER BY datums_no DESC");
