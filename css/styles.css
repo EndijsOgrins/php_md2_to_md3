@@ -1,0 +1,114 @@
+/* https://validator.w3.org/nu/#textarea */
+/* Vispārējie stili */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+header {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0f9c6d;
+}
+
+footer {
+    font-weight: bold;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #0f9c6d;
+}
+
+/* Sacensību tabulu stili */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;    
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(15, 156, 109);
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Grupu stili */
+.gads {
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gads table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.gads h2 {
+    background-color: #e9e9e9;
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 1.4em;
+}
+
+/* Sponsoru sadaļa */
+.sponsors {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.sponsor {
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.2s;
+    flex: 1 1 200px;
+}
+
+.sponsor:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.sponsor img {
+    height: 80px;
+    margin-bottom: 0.8rem;
+    object-fit: contain;
+    width: 100%;
+}
+
+/* Saites un interaktīvie elementi */
+a {
+    color: #0f9c6d;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #0c7a56;
+    text-decoration: underline;
+}
