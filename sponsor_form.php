@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <form method="POST" enctype="multipart/form-data" novalidate>
         <div class="form-group">
-            <label for="kompanijas_nosaukums" required>Kompanijas nosaukums</label>
+            <label for="kompanijas_nosaukums">Kompanijas nosaukums</label>
             <input type="text" name="kompanijas_nosaukums" id="kompanijas_nosaukums"
                 value="<?= htmlspecialchars($formData['kompanijas_nosaukums']) ?>"
                 required>
@@ -173,7 +173,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="form-group">
-            <label for="url" required>Tīmekļa vietnes URL</label>
+            <label for="url">Tīmekļa vietnes URL</label>
             <input type="url" name="url" id="url"
                 value="<?= htmlspecialchars($formData['url']) ?>" required>
             <?php if (!empty($errors['url'])): ?>
@@ -182,7 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="form-group">
-            <label for="logo" required>Logo</label>
+            <label for="logo">Logo</label>
             <input type="file" name="logo" id="logo" accept="image/*" required>
             <?php if (!empty($errors['logo'])): ?>
                 <div class="error-message"><?= $errors['logo'] ?></div>

@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <form method="POST" novalidate>
         <div class="form-group">
-            <label for="nosaukums" required>Nosaukums</label>
+            <label for="nosaukums">Nosaukums</label>
             <input type="text" name="nosaukums" id="nosaukums"
                    value="<?= htmlspecialchars($formData['nosaukums']) ?>"
                    required>
@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="form-group">
-            <label for="norises_vieta" required>Norises vieta</label>
+            <label for="norises_vieta">Norises vieta</label>
             <input type="text" name="norises_vieta" id="norises_vieta"
                    value="<?= htmlspecialchars($formData['norises_vieta']) ?>"
                    required>
@@ -115,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="form-group">
-            <label for="datums_no" required>Sākuma datums</label>
+            <label for="datums_no">Sākuma datums</label>
             <input type="date" name="datums_no" id="datums_no"
                    value="<?= htmlspecialchars($formData['datums_no']) ?>"
                    required>
@@ -125,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <div class="form-group">
-            <label for="datums_lidz" required>Beigu datums</label>
+            <label for="datums_lidz">Beigu datums</label>
             <input type="date" name="datums_lidz" id="datums_lidz"
                    value="<?= htmlspecialchars($formData['datums_lidz']) ?>"
                    required>

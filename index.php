@@ -42,7 +42,7 @@ if ($result) {
         <h2>Rallija sacensību kalendārs</h2>
         <nav>
             <ul>
-                <li><a href="competition_form.php">Pievienot sacensības</a></li> |
+                <li><a href="competition_form.php">Pievienot sacensības</a></li>
                 <li><a href="sponsor_form.php">Pievienot sponsoru</a></li>
             </ul>
         </nav>
