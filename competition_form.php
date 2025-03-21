@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Pievienot jaunas sacensības</h1>
+    <h2>Pievienot jaunas sacensības</h2>
     
     <?php if (isset($success) && $success): ?>
         <div class="success-message">Sacensības veiksmīgi pievienotas!</div>
@@ -136,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="button-group">
             <button type="submit">Saglabāt</button>
-            <a href="index.php" class="button">Atpakaļ</a>
+            <a href="index.php" class="button">&#x00AB; Atpakaļ</a>
         </div>
     </form>
 

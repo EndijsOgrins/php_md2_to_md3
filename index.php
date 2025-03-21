@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -23,6 +24,7 @@ if ($result) {
 
     $result->free();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -39,15 +41,22 @@ if ($result) {
     <header>
         <h2>Rallija sacensību kalendārs</h2>
         <nav>
-            <a href="competition_form.php">Pievienot sacensības</a> |
-            <a href="sponsor_form.php">Pievienot sponsoru</a>
+            <ul>
+                <li><a href="competition_form.php">Pievienot sacensības</a></li> |
+                <li><a href="sponsor_form.php">Pievienot sponsoru</a></li>
+            </ul>
         </nav>
     </header>
 
+
+    <?php if (isset($_GET['deleted']) && $_GET['deleted'] == 1): ?>
+        <div class="success-message">Sacensības veiksmīgi dzēstas!</div>
+    <?php endif; ?>
+
     <?php if (isset($_GET['success'])): ?>
         <div class="success-message">
-            <?= ($_GET['success'] === 'competition') ? 
-                'Sacensības veiksmīgi pievienotas!' : 
+            <?= ($_GET['success'] === 'competition') ?
+                'Sacensības veiksmīgi pievienotas!' :
                 'Sponsors veiksmīgi pievienots!' ?>
         </div>
     <?php endif; ?>
