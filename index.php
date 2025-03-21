@@ -36,7 +36,21 @@ if ($result) {
 </head>
 
 <body>
-    <h1>Rallija sacensību kalendārs</h1>
+    <header>
+        <h2>Rallija sacensību kalendārs</h2>
+        <nav>
+            <a href="competition_form.php">Pievienot sacensības</a> |
+            <a href="sponsor_form.php">Pievienot sponsoru</a>
+        </nav>
+    </header>
+
+    <?php if (isset($_GET['success'])): ?>
+        <div class="success-message">
+            <?= ($_GET['success'] === 'competition') ? 
+                'Sacensības veiksmīgi pievienotas!' : 
+                'Sponsors veiksmīgi pievienots!' ?>
+        </div>
+    <?php endif; ?>
 
     <?php foreach ($gadi as $gads):
         $year = $gads['gads']; // [gads] => 2025
