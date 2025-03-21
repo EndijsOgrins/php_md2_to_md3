@@ -122,12 +122,7 @@ $stmt->close();
 <body>
     <div class="heading-container">
         <h2><?= htmlspecialchars($sacensiba['nosaukums']) ?></h2>
-        <form method="POST"
-            onsubmit="return confirm('Vai tiešām vēlaties dzēst šīs sacensības?');"
-            class="delete-form">
-            <input type="hidden" name="action" value="delete_competition">
-            <button type="submit" class="action-button remove">Dzēst sacensības</button>
-        </form>
+        <button id="deleteRaceButton" class="action-button remove" onclick="deleteCompetition()">Dzēst sacensības</button>
     </div>
 
     <div class="info">
@@ -201,6 +196,30 @@ $stmt->close();
     <script>
         if (window.history.replaceState) {
             window.history.replaceState(null, null, window.location.href);
+        }
+
+        function deleteCompetition() {
+            if (confirm('Vai tiešām vēlaties dzēst šīs sacensības?')) {
+                // Create a FormData object with the required action parameter
+                var formData = new FormData();
+                formData.append('action', 'delete_competition');
+
+                // Send a POST request to the current URL
+                fetch(window.location.href, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => {
+                        // If the server sends a redirect header, navigate to the new URL
+                        if (response.redirected) {
+                            window.location.href = response.url;
+                        } else {
+                            // Otherwise, reload the page to update the UI
+                            location.reload();
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
         }
     </script>
 </body>
